@@ -1,0 +1,76 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    /* align-items: center; */
+    padding: 20px 40px;
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+    gap: 30px;
+    background-color: rgb(246, 250, 253);
+}
+
+.nav {
+    display: flex;
+    justify-content: right;
+    gap: 30px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #252359;
+    font-weight: 500;
+    position: relative;
+    border-bottom: 2px solid #f6e746;
+}
+
+.nav-link:hover::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: yellow;
+}
+
+.header-buttons {
+    display: flex;
+    justify-content: right;
+    gap: 15px;
+}
+
+/* .search-btn {
+    padding: 10px 15px;
+    border: 1px solid #1e1e5a;
+    background-color: white;
+    color: #1e1e5a;
+    border-radius: 5px;
+    cursor: pointer;
+} */
+.search-input {
+    padding: 10px 16px;
+    font-size: 16px;
+    border: 1px solid #252359;
+    border-radius: 4px;
+    width: 100%;
+    /* or set a fixed width if you want */
+    max-width: 300px;
+    /* outline: 1px solid #252359; */
+    background-color: #f6fafd;
+}
+
+.search-input:focus {
+    border-color: #252359;
+    outline: 1px solid #252359;
+    color: #252359;
+}
+
+.reserve-btn {
+    padding: 10px 70px;
+    background-color: #f6e746;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
