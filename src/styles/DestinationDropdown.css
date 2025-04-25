@@ -1,0 +1,26 @@
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    color: #252359;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .region h4 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .region ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .region li {
+    padding: 0.25rem 0;
+  }  
