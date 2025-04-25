@@ -1,0 +1,18 @@
+.navbar {
+    background-color: #252359;
+    color: white;
+    padding: 0.5rem;
+    position: relative;
+  }
+  
+  .nav-links {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    cursor: pointer;
+    margin: 3px;
+  }
+  
+  .nav-links li:hover {
+    text-decoration: underline;
+  }  

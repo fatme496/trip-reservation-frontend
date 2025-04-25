@@ -1,0 +1,35 @@
+.trip-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+    padding: 1.5rem;
+    color: #252359;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .trip-type {
+    text-align: center;
+    padding: 0.5rem;
+    transition: transform 0.2s;
+    cursor: pointer;
+  }
+  
+  .trip-type:hover {
+    transform: translateY(-4px);
+  }
+  
+  .trip-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .trip-label {
+    font-weight: bold;
+  }
+  

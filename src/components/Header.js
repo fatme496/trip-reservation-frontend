@@ -18,12 +18,12 @@ const Header = () => {
                 <a href="/contact" className="nav-link">Contact Us</a>
             </nav>
             <div className="header-buttons">
-                <input
+                {/* <input
                     type="text"
                     className="search-input"
                     placeholder="Search for a trip..."
-                />
-                <button className="reserve-btn" onClick={goToReserve}>RESERVE ONLINE</button>
+                /> */}
+                {/* <button className="reserve-btn" onClick={goToReserve}>RESERVE ONLINE</button> */}
             </div>
         </header>
     );
