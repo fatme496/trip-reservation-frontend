@@ -1,0 +1,52 @@
+.trip-page {
+    padding: 2rem;
+    max-width: 70%;
+    margin: auto 30px;
+    font-family: sans-serif;
+  }
+  
+  .trip-header img {
+    width: 100%;
+    border-radius: 12px;
+    margin: 1rem 0;
+  }
+  
+  .trip-info p,
+  .trip-details ul li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .trip-details h2 {
+    margin-top: 1.5rem;
+  }
+  
+  .reservation-form {
+    margin-top: 2rem;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+  }
+  
+  .reservation-form form input,
+  .reservation-form form button {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+  }
+  
+  .reservation-form button {
+    background-color: #3a86ff;
+    color: white;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .success-message {
+    color: green;
+    font-weight: bold;
+  }
+  
