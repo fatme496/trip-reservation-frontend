@@ -1,30 +1,32 @@
 import React from 'react';
 import '../styles/Header.css';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
+import Logo from './Logo';
 
 const Header = () => {
 
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
 
-  const goToReserve = () => {
-    navigate('/reserve');
-  };
+//   const goToReserve = () => {
+//     navigate('/reserve');
+//   };
 
     return (
         <header className="header">
+            <div><Logo></Logo></div>
             <nav className="nav">
                 <a href="/signup" className="nav-link">Sign Up</a>
                 <a href="/about" className="nav-link">About Us</a>
                 <a href="/contact" className="nav-link">Contact Us</a>
             </nav>
-            <div className="header-buttons">
+            {/* <div className="header-buttons"> */}
                 {/* <input
                     type="text"
                     className="search-input"
                     placeholder="Search for a trip..."
                 /> */}
                 {/* <button className="reserve-btn" onClick={goToReserve}>RESERVE ONLINE</button> */}
-            </div>
+            {/* </div> */}
         </header>
     );
 };
