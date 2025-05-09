@@ -1,0 +1,52 @@
+.about-container {
+    font-family: "Segoe UI", sans-serif;
+    color: #002D46;
+  }
+  
+  .about-hero {
+    background-color: #f2f5f9;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .about-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  
+  .about-hero p {
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  .about-content {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  
+  .about-content section {
+    margin-bottom: 40px;
+  }
+  
+  .about-content h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #E69C00;
+  }
+  
+  .about-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+  .about-content ul {
+    list-style: disc inside;
+    padding-left: 10px;
+  }
+  
+  .about-content li {
+    margin: 8px 0;
+    font-size: 1.05rem;
+  }
+  
