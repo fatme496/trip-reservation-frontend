@@ -4,6 +4,9 @@ import TripCard from '../components/TripCard.js';
 // import './HomePage.css'; // Optional: Add any additional styling
 import TripList from '../components/TripList.js';
 import HeroSection from '../components/HeroSection.js';
+import WhyTripInLebSection from '../components/WhyTripInLebSection.js';
+import HowItWorksSection from '../components/HowItWorksSection.js';
+import Footer from '../components/Footer.js';
 
 const HomePage = () => {
   const [trips, setTrips] = useState([]);
@@ -24,7 +27,8 @@ const HomePage = () => {
 
   return (
     <div className="home-page">
-      <div><HeroSection></HeroSection></div>
+      <div><HeroSection/></div>
+      <div><WhyTripInLebSection/></div>
       <h2>Explore Our Trips</h2>
       <div className="trips-list">
         {trips.map((trip) => (
@@ -34,6 +38,8 @@ const HomePage = () => {
       <div>
         <TripList/>
       </div>
+      <div><HowItWorksSection/></div>
+      <div><Footer/></div>
     </div>
   );
 };
