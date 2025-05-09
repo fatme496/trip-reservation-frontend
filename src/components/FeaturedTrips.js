@@ -10,7 +10,7 @@ const FeaturedTrips = () => {
   useEffect(() => {
     const fetchTrips = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/trips');
+        const res = await axios.get(`${API_URL}/api/trips`, { withCredentials: true });
         setTrips(res.data.data); // adjust according to your backend response
       } catch (err) {
         console.error('Error fetching trips:', err.message);

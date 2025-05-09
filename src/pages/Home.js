@@ -17,8 +17,8 @@ const HomePage = () => {
     // Fetch trips from the backend API
     const fetchTrips = async () => {
       try {
-        const response = await axios.get(`${API_URL}/api/trips`); // Assuming the API endpoint is /api/trips
-        setTrips(response.data.data);
+        const response = await axios.get(`${API_URL}/api/trips`, { withCredentials: true }); // Assuming the API endpoint is /api/trips
+        setTrips(response?.data?.data || []);
       } catch (error) {
         console.error('Error fetching trips:', error);
       }
@@ -33,9 +33,16 @@ const HomePage = () => {
       <div><WhyTripInLebSection/></div>
       <h2>Explore Our Trips</h2>
       <div className="trips-list">
-        {trips.map((trip) => (
+        {/* {trips?.map((trip) => (
           <TripCard key={trip._id} trip={trip} /> // Passing each trip as props to the TripCard
-        ))}
+        ))} */}
+        {trips.length === 0 ? (
+  <p>No trips available at the moment.</p>
+) : (
+  trips.map((trip) => (
+    <TripCard key={trip._id} trip={trip} />
+  ))
+)}
       </div>
       <div>
         <TripList/>

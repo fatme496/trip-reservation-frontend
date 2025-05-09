@@ -12,7 +12,7 @@ const TripsList = () => {
   useEffect(() => {
     const fetchTrips = async () => {
       try {
-        const response = await axios.get(`${API_URL}/api/trips`); // ⬅️ adapt URL if needed
+        const response = await axios.get(`${API_URL}/api/trips`, { withCredentials: true }); // ⬅️ adapt URL if needed
         setTrips(response.data.data);
       } catch (err) {
         setError('Failed to load trips');
