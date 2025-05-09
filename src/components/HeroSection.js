@@ -12,9 +12,9 @@ import image6 from '../assets/1154538599.jpg';
 
 function HeroSection() {
   const slides = [
-    { id: 1, image: image3, text: 'Discover Paris' },
-    { id: 2, image: image5, text: 'Explore the Alps' },
-    { id: 3, image: image6, text: 'Relax in Bali' },
+    { id: 1, image: image3, text: 'Discover PariBeach Day in Batroun' },
+    { id: 2, image: image5, text: 'Camping in Ehden Forest' },
+    { id: 3, image: image6, text: 'Beach Day in Batroun' },
   ];
 
   const settings = {
