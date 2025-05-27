@@ -38,7 +38,7 @@ const Tripcard = ({ trip }) => {
   return (
     <div className="trip-card-modern">
       <img
-        src="/placeholder.jpg" // Replace with `trip.image` if available
+        src="https://i.ibb.co/Hp1xX8Hr/backpacker-standing-sunrise-viewpoint-ja-bo-village-mae-hong-son-province-thailand.jpg" // Replace with `trip.image` if available
         alt={title}
         className="trip-image-modern"
       />

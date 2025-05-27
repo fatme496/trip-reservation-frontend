@@ -210,7 +210,7 @@ const TripDetails = () => {
       </div>
 
       <div className="trip-body">
-        <img src="/placeholder.jpg" alt={trip.title} className="trip-details-image" />
+        <img src="https://i.ibb.co/Hp1xX8Hr/backpacker-standing-sunrise-viewpoint-ja-bo-village-mae-hong-son-province-thailand.jpg" alt={trip.title} className="trip-details-image" />
         <div className="trip-info">
           <p>
             <strong>🗓️ Date:</strong> {formatDate(trip.startDate)} - {formatDate(trip.endDate)}

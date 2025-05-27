@@ -12,6 +12,7 @@ import ExploreTrips from './pages/ExploreTrips';
 import TripDetails from './pages/TripDetails';
 import MyReservations from './pages/MyReservations';
 import PostTrip from './pages/PostTrip';
+import Footer from '../src/components/Footer';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Route path="/my-reservations" element={<MyReservations />} />
         <Route path="/post-trip" element={<PostTrip />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }
