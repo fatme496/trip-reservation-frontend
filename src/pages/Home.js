@@ -6,7 +6,7 @@
 import HeroSection from '../components/HeroSection.js';
 import WhyTripInLebSection from '../components/WhyTripInLebSection.js';
 import HowItWorksSection from '../components/HowItWorksSection.js';
-import Footer from '../components/Footer.js';
+
 // import { API_URL } from "../config/api";
 
 
@@ -46,7 +46,7 @@ const HomePage = () => {
         {/* <TripList/> */}
       </div>
       <div><HowItWorksSection/></div>
-      <div><Footer/></div>
+      
     </div>
   );
 };
