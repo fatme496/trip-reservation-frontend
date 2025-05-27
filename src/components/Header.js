@@ -1,34 +1,71 @@
-import React from 'react';
+import React, { useState, useRef, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
+import { FiUser } from 'react-icons/fi';
 import '../styles/Header.css';
-// import { useNavigate } from 'react-router-dom';
 import Logo from './Logo';
 
 const Header = () => {
+  const { user, logout } = useAuth();
+  const navigate = useNavigate();
+  const [menuOpen, setMenuOpen] = useState(false);
+  const menuRef = useRef(null);
 
-    // const navigate = useNavigate();
+  const handleLogout = async () => {
+    try {
+      await fetch('/api/users/logout', {
+        method: 'POST',
+        credentials: 'include',
+      });
+      logout();
+      navigate('/');
+    } catch (error) {
+      console.error('Logout failed', error);
+    }
+  };
 
-//   const goToReserve = () => {
-//     navigate('/reserve');
-//   };
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setMenuOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
-    return (
-        <header className="header">
-            <div><Logo></Logo></div>
-            <nav className="nav">
-                <a href="/signup" className="nav-link">Sign Up</a>
-                <a href="/about" className="nav-link">About Us</a>
-                <a href="/contact" className="nav-link">Contact Us</a>
-            </nav>
-            {/* <div className="header-buttons"> */}
-                {/* <input
-                    type="text"
-                    className="search-input"
-                    placeholder="Search for a trip..."
-                /> */}
-                {/* <button className="reserve-btn" onClick={goToReserve}>RESERVE ONLINE</button> */}
-            {/* </div> */}
-        </header>
-    );
+  return (
+    <header className="header">
+      <div className="logo-container" onClick={() => navigate('/')}>
+        <Logo />
+      </div>
+
+      <div className="nav-user-container">
+        <nav className="nav">
+          <a href="/exploretrips" className="nav-link">Explore Trips</a>
+          <a href="/post-trip" className="nav-link">Post Trip</a>
+          <a href="/my-reservations" className="nav-link">My Reservations</a>
+          {!user && (
+            <a href="/signup" className="nav-link">Sign Up</a>
+          )}
+        </nav>
+
+        {user && (
+          <div className="user-menu" ref={menuRef}>
+            <button className="user-icon" onClick={() => setMenuOpen(!menuOpen)}>
+              <FiUser size={20} />
+            </button>
+            {menuOpen && (
+              <div className="dropdown">
+                {user && <p className="profile-name">{user.data.name}</p>}
+                <button onClick={handleLogout} className="logout-btn">Logout</button>
+              </div>
+            )}
+          </div>
+        )}
+      </div>
+    </header>
+  );
 };
 
 export default Header;

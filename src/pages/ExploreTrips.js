@@ -1,33 +1,39 @@
-import React from "react";
-import TripList from "../components/TripList";
+import { useEffect, useState } from "react";
+import TripCard from "../components/TripFullCard";
+import FilterSidebar from "../components/FilterSidebar";
+// import SearchBar from "../components/SearchBar";
+import { fetchTrips } from "../services/tripService";
+import "../styles/ExploreTrips.css";
 
 const ExploreTrips = () => {
+  const [trips, setTrips] = useState([]);
+  const [filters, setFilters] = useState({});
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setLoading(true);
+    fetchTrips(filters).then(data => {
+      setTrips(data.data);
+      setLoading(false);
+    });
+  }, [filters]);
+
   return (
-    <div style={styles.container}>
-      <h1 style={styles.title}>Explore Trips</h1>
-      <p style={styles.subtitle}>Find and reserve your next adventure in Lebanon!</p>
-      <TripList />
+    <div className="explore-page">
+      <div className="main-content">
+        <FilterSidebar filters={filters} setFilters={setFilters} />
+        <div className="trip-grid">
+          {loading ? (
+            <p className="loading-text">Loading trips...</p>
+          ) : trips.length === 0 ? (
+            <p className="no-results">No trips match your filters.</p>
+          ) : (
+            trips.map(trip => <TripCard key={trip._id} trip={trip} />)
+          )}
+        </div>
+      </div>
     </div>
   );
-};
-
-const styles = {
-  container: {
-    padding: "2rem",
-    fontFamily: "sans-serif",
-  },
-  title: {
-    fontSize: "2.5rem",
-    marginBottom: "0.5rem",
-    textAlign: "center",
-    color: "#2c3e50",
-  },
-  subtitle: {
-    fontSize: "1.2rem",
-    textAlign: "center",
-    marginBottom: "2rem",
-    color: "#7f8c8d",
-  },
 };
 
 export default ExploreTrips;

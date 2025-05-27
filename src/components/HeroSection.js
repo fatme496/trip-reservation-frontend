@@ -1,4 +1,4 @@
-import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import Slider from 'react-slick';
 import { motion } from 'framer-motion';
 import { FaPlaneDeparture } from 'react-icons/fa';
@@ -11,9 +11,11 @@ import image5 from '../assets/backpacker-standing-sunrise-viewpoint-ja-bo-villag
 import image6 from '../assets/1154538599.jpg';
 
 function HeroSection() {
+  const navigate = useNavigate();
+
   const slides = [
-    { id: 1, image: image3, text: 'Discover PariBeach Day in Batroun' },
     { id: 2, image: image5, text: 'Camping in Ehden Forest' },
+    { id: 1, image: image3, text: 'Discover PariBeach Day in Batroun' },
     { id: 3, image: image6, text: 'Beach Day in Batroun' },
   ];
 
@@ -25,7 +27,7 @@ function HeroSection() {
     autoplaySpeed: 4000,
     slidesToShow: 1,
     slidesToScroll: 1,
-    fade: true
+    fade: true,
   };
 
   return (
@@ -52,6 +54,7 @@ function HeroSection() {
               <motion.button
                 className="hero-btn"
                 whileHover={{ scale: 1.1 }}
+                onClick={() => navigate('/exploretrips')} // ✅ add click action
               >
                 <FaPlaneDeparture /> Explore Trips
               </motion.button>

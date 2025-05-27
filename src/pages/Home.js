@@ -31,11 +31,9 @@ const HomePage = () => {
     <div className="home-page">
       <div><HeroSection/></div>
       <div><WhyTripInLebSection/></div>
-      <h2>Explore Our Trips</h2>
+      {/* <h2>Explore Our Trips</h2>
       <div className="trips-list">
-        {/* {trips?.map((trip) => (
-          <TripCard key={trip._id} trip={trip} /> // Passing each trip as props to the TripCard
-        ))} */}
+        
         {trips.length === 0 ? (
   <p>No trips available at the moment.</p>
 ) : (
@@ -43,9 +41,9 @@ const HomePage = () => {
     <TripCard key={trip._id} trip={trip} />
   ))
 )}
-      </div>
+      </div> */}
       <div>
-        <TripList/>
+        {/* <TripList/> */}
       </div>
       <div><HowItWorksSection/></div>
       <div><Footer/></div>

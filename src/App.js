@@ -9,6 +9,9 @@ import AboutUs from './pages/Aboutus';
 import Contact from './pages/ContactUs';
 import TripPage from './pages/TripPage';
 import ExploreTrips from './pages/ExploreTrips';
+import TripDetails from './pages/TripDetails';
+import MyReservations from './pages/MyReservations';
+import PostTrip from './pages/PostTrip';
 
 function App() {
   return (
@@ -23,7 +26,9 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/trip" element={<TripPage />} />
         <Route path="/exploretrips" element={<ExploreTrips />} />
-        {/* Add more routes later */}
+        <Route path="/trips/:id" element={<TripDetails />} />
+        <Route path="/my-reservations" element={<MyReservations />} />
+        <Route path="/post-trip" element={<PostTrip />} />
       </Routes>
     </Router>
   );

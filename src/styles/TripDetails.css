@@ -1,0 +1,151 @@
+.trip-details-page {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #f3f4f6, #e0f7fa);
+  color: #2c3e50;
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+.trip-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.trip-header h1 {
+  font-size: 2.5rem;
+  color: #00838f;
+  margin-bottom: 0.5rem;
+}
+
+.trip-location {
+  font-size: 1.2rem;
+  color: #006064;
+}
+
+.trip-body {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.trip-details-image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.trip-info {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+  background-color: white;
+  padding: 1.8rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.trip-info p {
+  margin: 0.6rem 0;
+  line-height: 1.6;
+}
+
+.trip-info strong {
+  color: #00796b;
+}
+
+.reservation-form {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #ccc;
+}
+
+.reservation-form h3 {
+  font-size: 1.4rem;
+  color: #00695c;
+  margin-bottom: 1rem;
+}
+
+.reservation-form label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 600;
+  color: #37474f;
+}
+
+.reservation-form input,
+.reservation-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-top: 0.4rem;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.reservation-form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.reserve-btn,
+.update-btn,
+.cancel-btn {
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.reserve-btn {
+  background-color: #00796b;
+  color: white;
+}
+
+.reserve-btn:hover {
+  background-color: #004d40;
+  transform: scale(1.02);
+}
+
+.update-btn {
+  background-color: #0288d1;
+  color: white;
+  margin-right: 1rem;
+}
+
+.update-btn:hover {
+  background-color: #01579b;
+  transform: scale(1.02);
+}
+
+.cancel-btn {
+  background-color: #ef5350;
+  color: white;
+}
+
+.cancel-btn:hover {
+  background-color: #c62828;
+  transform: scale(1.02);
+}
+
+.reservation-msg {
+  margin-top: 1rem;
+  font-weight: 500;
+  color: #4e342e;
+}
+
+.loading-text,
+.error-text {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #b71c1c;
+  margin-top: 3rem;
+}

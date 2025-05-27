@@ -1,0 +1,244 @@
+/* .my-reservations-page {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+  font-family: "Segoe UI", sans-serif;
+}
+
+.my-reservations-page h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.reservation-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.reservation-item {
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 1.2rem 1.5rem;
+  margin-bottom: 1.2rem;
+  transition: box-shadow 0.3s;
+  background-color: #f9f9f9;
+}
+
+.reservation-item:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.reservation-item h3 {
+  margin-top: 0;
+  font-size: 1.3rem;
+  color: #2d5da4;
+}
+
+.reservation-item p {
+  margin: 6px 0;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.reservation-item strong {
+  color: #1a8d4c;
+  text-transform: capitalize;
+}
+
+.reservation-msg {
+  margin-top: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.cancel-btn {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #ff4444;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.cancel-btn:hover {
+  background-color: #e63946;
+}
+
+@media (max-width: 600px) {
+  .reservation-item {
+    padding: 1rem;
+  }
+
+  .reservation-item h3 {
+    font-size: 1.1rem;
+  }
+
+  .reservation-item p {
+    font-size: 0.9rem;
+  }
+} */
+ .my-reservations-page {
+  /* max-width: 850px; */
+  /* margin: 3rem auto; */
+  padding: 2rem 2.5rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(31 38 135 / 0.25);
+  background: linear-gradient(to right, #f3f4f6, #e0f7fa);
+  border-radius: 16px;
+  box-shadow:
+    0 8px 32px rgb(31 38 135 / 0.1),
+    inset 0 -1px 0 rgb(255 255 255 / 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255 255 255 / 0.3);
+  transition: box-shadow 0.3s ease;
+}
+
+.my-reservations-page:hover {
+  box-shadow:
+    0 12px 48px rgb(31 38 135 / 0.25),
+    inset 0 -1px 0 rgb(255 255 255 / 0.8);
+}
+
+.my-reservations-page h2 {
+  text-align: center;
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #3b4064;
+  margin-bottom: 2.5rem;
+  letter-spacing: 0.04em;
+  text-shadow: 1px 1px 3px rgba(59,64,100,0.15);
+}
+
+.reservation-msg {
+  max-width: 650px;
+  margin: 1rem auto 2rem;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  justify-content: center;
+  color: #256d24;
+  background: #d7f0dd;
+  box-shadow: 0 3px 10px rgb(37 109 36 / 0.2);
+}
+
+.reservation-msg::before {
+  content: "✔️";
+  font-size: 1.3rem;
+}
+
+.reservation-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-gap: 1.8rem;
+}
+
+.reservation-item {
+  /* background: rgba(255 255 255 / 0.85); */
+  border-radius: 14px;
+  padding: 1.6rem 2rem;
+  box-shadow:
+    0 2px 6px rgb(0 0 0 / 0.06),
+    0 8px 20px rgb(0 0 0 / 0.1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border: 1.5px solid transparent;
+  cursor: default;
+}
+
+.reservation-item:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 10px 25px rgb(0 0 0 / 0.15),
+    0 2px 6px rgb(0 0 0 / 0.1);
+  border-color: #7f8cde;
+}
+
+.reservation-item h3 {
+  margin: 0 0 0.4rem 0;
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #4f5d7a;
+}
+
+.reservation-item p {
+  margin: 0.4rem 0;
+  color: #555f7a;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.reservation-item strong {
+  color: #3b4a89;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.cancel-btn {
+  margin-top: 1.4rem;
+  padding: 0.55rem 1.3rem;
+  background: linear-gradient(135deg, #f56a79 0%, #f24c4c 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 12px rgb(245 106 121 / 0.7);
+  user-select: none;
+}
+
+.cancel-btn:hover:not(:disabled) {
+  box-shadow: 0 8px 20px rgb(242 76 76 / 0.9);
+  transform: scale(1.06);
+}
+
+.cancel-btn:disabled {
+  background: #f9b8b8;
+  cursor: not-allowed;
+  box-shadow: none;
+  color: #772626;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .my-reservations-page {
+    padding: 1.5rem 1.8rem;
+    margin: 1.5rem 1rem;
+  }
+  
+  .my-reservations-page h2 {
+    font-size: 1.8rem;
+  }
+
+  .reservation-item {
+    padding: 1.1rem 1.4rem;
+  }
+
+  .reservation-item h3 {
+    font-size: 1.15rem;
+  }
+
+  .reservation-item p {
+    font-size: 0.95rem;
+  }
+
+  .cancel-btn {
+    font-size: 0.95rem;
+    padding: 0.45rem 1rem;
+  }
+}

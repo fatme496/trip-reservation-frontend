@@ -1,0 +1,36 @@
+ .explore-page {
+   padding: 40px;
+   background: linear-gradient(to right, #f3f4f6, #e0f7fa);
+ }
+
+ .main-content {
+   display: flex;
+   gap: 24px;
+   align-items: flex-start;
+   flex-wrap: wrap;
+ }
+
+ /* Sidebar stays on the left */
+ .main-content>.sidebar {
+   flex: 1;
+   min-width: 280px;
+   max-width: 320px;
+ }
+
+ /* Trip grid on the right */
+ .trip-grid {
+   flex: 3;
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+   gap: 24px;
+ }
+
+ /* Loading / no results text */
+ .loading-text,
+ .no-results {
+   grid-column: 1 / -1;
+   text-align: center;
+   font-size: 1.1rem;
+   color: #777;
+   padding: 40px 0;
+ }
